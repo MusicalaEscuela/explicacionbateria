@@ -1,0 +1,75 @@
+/* 🎨 Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 18px; /* Texto más grande */
+    line-height: 1.8;
+}
+
+/* 📌 Logo centrado */
+.logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 📦 Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🥁 Secciones */
+.section {
+    margin-bottom: 40px;
+    padding: 25px;
+    border-left: 6px solid #007BFF;
+    background: #f4f4f4;
+    border-radius: 5px;
+}
+
+/* 🔠 Títulos mejorados */
+h1 {
+    text-align: center;
+    background: #007BFF;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    font-size: 32px;
+}
+
+h2 {
+    color: #0056b3;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* 📱 Diseño responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+}
