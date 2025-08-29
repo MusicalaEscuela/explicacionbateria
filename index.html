@@ -1,90 +1,210 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cómo Pensar la Batería</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cómo Pensar la Batería – Musicala</title>
+
+  <meta name="description" content="Guía súper simple para empezar con la batería: cómo suena, cómo se organiza y un laboratorio de tres sonidos (bombo, redoblante y hi-hat) para practicar." />
+  <meta name="theme-color" content="#0a7cff" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+
+  <!-- Preloads útiles -->
+  <link rel="preload" as="image" href="Encabezado Batería.jpg" />
+  <link rel="preload" as="image" href="Tarjetas de sonidos.jpg" />
+  <link rel="preload" as="image" href="Mapa.jpg" />
+  <link rel="preload" as="image" href="Icon bombo.jpg" />
+  <link rel="preload" as="image" href="Icon redoblante.jpg" />
+  <link rel="preload" as="image" href="Icon hihat.jpg" />
+  <link rel="preload" as="audio" href="kick.wav" type="audio/wav" />
+  <link rel="preload" as="audio" href="snare.wav" type="audio/wav" />
+  <link rel="preload" as="audio" href="hihat.wav" type="audio/wav" />
 </head>
 <body>
 
-    <!-- Logo de Musicala -->
-    <div class="logo-container">
-        <img src="https://static.wixstatic.com/media/85afce_3adb3865c88a492b93a8bf2dc69049c3~mv2.png" 
-             alt="Musicala Logo" class="logo">
+  <!-- Logo Musicala -->
+  <div class="logo-container">
+    <img
+      src="https://static.wixstatic.com/media/85afce_3adb3865c88a492b93a8bf2dc69049c3~mv2.png"
+      alt="Logo de Musicala"
+      class="logo"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+
+  <!-- Encabezado con hero limitado -->
+  <header class="site-header">
+    <h1>🥁 ¿Cómo pensar la Batería?</h1>
+    <img
+      src="Encabezado Batería.jpg"
+      alt="Ilustración de un set de batería moderno"
+      class="hero"
+      loading="eager"
+      style="max-height: 360px; width: 100%; object-fit: cover; object-position: center; border-radius: 20px;"
+    />
+  </header>
+
+  <main class="container">
+
+    <!-- 0. ¿Qué es una batería? -->
+    <section class="section">
+      <h2>👋 Antes de empezar: ¿qué es una batería?</h2>
+      <p>
+        La batería es un conjunto de instrumentos que se tocan al mismo tiempo.
+        No necesitas saber nombres raros para comenzar. Primero, vamos a
+        <strong>escuchar</strong> y <strong>sentir</strong> los sonidos. Luego le ponemos nombres.
+      </p>
+      <p class="muted">Piensa en tres ideas: un golpe profundo (💥 pecho), una palmada clara (👏) y un chasquido rápido (✨).</p>
+    </section>
+
+    <!-- 1. Pensar en sonidos -->
+    <section class="section" aria-labelledby="sonidos-titulo">
+      <h2 id="sonidos-titulo">🎵 Pensar en la batería como Sonidos</h2>
+      <p>
+        La manera más fácil de entender la batería es dividirla en
+        <strong>tres familias de sonidos</strong>:
+      </p>
+      <ul>
+        <li><strong>🔵 Graves:</strong> suenan “gordos” y profundos, como un golpe al pecho o una puerta pesada cerrándose.</li>
+        <li><strong>🟠 Medios:</strong> suenan claros y secos, como una <em>palmada</em>.</li>
+        <li><strong>🟡 Agudos:</strong> suenan finos y rápidos, como monedas chocando o un “tsss”.</li>
+      </ul>
+
+      <figure>
+        <img
+          src="Tarjetas de sonidos.jpg"
+          alt="Tres tarjetas con ondas: izquierda grave (azul), centro medio (naranja), derecha agudo (amarillo)"
+          class="figure"
+          loading="lazy"
+        />
+        <figcaption class="muted">De izquierda a derecha: <strong>Graves</strong> (más anchos), <strong>Medios</strong>, <strong>Agudos</strong> (más finos).</figcaption>
+      </figure>
+
+      <h3>¿Cómo reconozco cada uno?</h3>
+      <ul>
+        <li><strong>Grave:</strong> sientes vibración en el cuerpo. Es la base que marca los pasos.</li>
+        <li><strong>Medio:</strong> corta el aire como una palmada que ordena el ritmo.</li>
+        <li><strong>Agudo:</strong> es “chispa” o “tsss” que cuenta el tiempo.</li>
+      </ul>
+
+      <h3>Ejercicios rápidos (sin batería)</h3>
+      <ol>
+        <li>Di en voz baja: <strong>“pum”</strong> (grave), <strong>“pa”</strong> (medio), <strong>“tsss”</strong> (agudo).</li>
+        <li>Camina marcando el “pum” con el pie y las palmas en “pa”.</li>
+        <li>Cuenta <em>1 y 2 y 3 y 4 y</em>. Pon el <strong>tsss</strong> en cada <em>y</em>.</li>
+      </ol>
+    </section>
+
+    <!-- 2. ¿Cómo se divide el set? -->
+    <section class="section">
+      <h2>🥁 ¿Cómo se divide la batería?</h2>
+      <p>Todo el set se agrupa en dos grandes equipos:</p>
+      <ul>
+        <li><strong>🛢️ Tambores:</strong> hacen los golpes “pum/pa”: <em>bombo</em>, <em>redoblante</em> y <em>toms</em>.</li>
+        <li><strong>🥇 Platillos:</strong> hacen los “tsss”: <em>hi-hat</em>, <em>crash</em> y <em>ride</em>.</li>
+      </ul>
+
+      <figure>
+        <img
+          src="Mapa.jpg"
+          alt="Diagrama sencillo del set: tambores y platillos ubicados en el espacio"
+          class="figure"
+          loading="lazy"
+        />
+        <figcaption class="muted">Ubicación general del set: tambores al frente y platillos arriba/laterales.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 3. Elementos esenciales -->
+    <section class="section" aria-labelledby="esenciales-titulo">
+      <h2 id="esenciales-titulo">🔑 Los 3 Elementos Esenciales</h2>
+      <p>Para empezar, con <strong>tres piezas</strong> puedes tocar muchísima música:</p>
+
+      <!-- Fila visual con tus íconos locales -->
+      <div style="display:flex; gap:16px; justify-content:center; align-items:flex-start; flex-wrap:wrap; margin:10px 0 12px;">
+        <figure style="width:180px; text-align:center; margin:0;">
+          <img src="Icon bombo.jpg" alt="Icono del bombo" style="width:90px; height:auto; margin:6px auto 8px;" />
+          <figcaption><strong>1) Bombo</strong><br><span class="muted">El “pum”. Marca pasos y da profundidad.</span></figcaption>
+        </figure>
+        <figure style="width:180px; text-align:center; margin:0;">
+          <img src="Icon redoblante.jpg" alt="Icono del redoblante" style="width:90px; height:auto; margin:6px auto 8px;" />
+          <figcaption><strong>2) Redoblante</strong><br><span class="muted">El “pa”. Acentúa y ordena el ritmo.</span></figcaption>
+        </figure>
+        <figure style="width:180px; text-align:center; margin:0;">
+          <img src="Icon hihat.jpg" alt="Icono del hi-hat" style="width:90px; height:auto; margin:6px auto 8px;" />
+          <figcaption><strong>3) Hi-hat</strong><br><span class="muted">El “tsss”. Cuenta el tiempo y da movimiento.</span></figcaption>
+        </figure>
+      </div>
+
+      <p>Con solo estos tres puedes tocar rock, pop, funk y reggae. Es como cocinar con sal, pimienta y aceite: básico pero poderosísimo.</p>
+
+      <h3>Mini-práctica (hands-free)</h3>
+      <ul>
+        <li>Pon el <strong>pum</strong> (bombo) en los números <em>1</em> y <em>3</em>.</li>
+        <li>Pon el <strong>pa</strong> (redoblante) en los números <em>2</em> y <em>4</em>.</li>
+        <li>Haz <strong>tsss</strong> (hi-hat) en cada <em>“y”</em> entre los números: <em>1 y 2 y 3 y 4 y</em>.</li>
+      </ul>
+    </section>
+
+    <!-- 4. ¿Por qué hay más piezas? -->
+    <section class="section">
+      <h2>🛠️ ¿Por qué hay más tambores y platillos?</h2>
+      <ul>
+        <li><strong>Toms:</strong> sirven para hacer “paseos” (rellenos) con distintas alturas.</li>
+        <li><strong>Crash:</strong> golpe brillante para empezar o remarcar un momento.</li>
+        <li><strong>Ride:</strong> mantiene un patrón claro y estable (como un hi-hat largo).</li>
+        <li><strong>China/Splash:</strong> efectos para colores más agresivos o chispeantes.</li>
+      </ul>
+      <p>Piensa en el set como una <strong>paleta de colores</strong>: con lo básico pintas; con más piezas decoras y detallas.</p>
+    </section>
+
+    <!-- 5. Laboratorio de sonidos -->
+    <section class="section lab">
+      <h2>🧪 Laboratorio de Sonidos (Pads)</h2>
+      <p class="muted">Usa click o teclado: <kbd>A</kbd> Bombo, <kbd>S</kbd> Redoblante, <kbd>D</kbd> Hi-hat.</p>
+
+      <div class="controls">
+        <label class="control">
+          Volumen:
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="0.9" aria-label="Volumen global" />
+        </label>
+        <label class="control checkbox">
+          <input id="noOverlap" type="checkbox" checked />
+          Evitar solapamiento
+        </label>
+      </div>
+
+      <div class="drum-grid" role="group" aria-label="Pads de batería">
+        <button class="pad play-btn" data-sound="kick" aria-label="Bombo (tecla A)">
+          <img src="Icon bombo.jpg" alt="" class="pad-icon" loading="lazy" />
+          Bombo <span class="key">A</span>
+        </button>
+        <button class="pad play-btn" data-sound="snare" aria-label="Redoblante (tecla S)">
+          <img src="Icon redoblante.jpg" alt="" class="pad-icon" loading="lazy" />
+          Redoblante <span class="key">S</span>
+        </button>
+        <button class="pad play-btn" data-sound="hihat" aria-label="Hi-hat (tecla D)">
+          <img src="Icon hihat.jpg" alt="" class="pad-icon" loading="lazy" />
+          Hi-hat <span class="key">D</span>
+        </button>
+      </div>
+
+      <div id="status" class="sr-only" aria-live="polite"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Musicala. Todos los derechos reservados.</p>
+  </footer>
+
+  <noscript>
+    <div style="max-width:900px;margin:16px auto;padding:12px;background:#fff;border:1px solid #eee;border-radius:10px;">
+      Para usar el laboratorio de sonidos, habilita JavaScript.
     </div>
-
-    <header>
-        <h1>🥁 Cómo Pensar la Batería</h1>
-    </header>
-
-    <main class="container">
-
-        <!-- 🔊 SECCIÓN 1: Pensar en sonidos -->
-        <section class="section">
-            <h2>🎵 Pensar en la batería como Sonidos</h2>
-            <p>Antes de aprender los nombres de los tambores y platillos, podemos pensar en la batería en términos de **sonidos básicos**. 
-               Estos sonidos se agrupan en **tres categorías principales**:</p>
-            <ul>
-                <li><strong>🔵 Sonidos Graves:</strong> Son profundos y potentes, como el **bombo**.</li>
-                <li><strong>🟠 Sonidos Medios:</strong> Son secos y definidos, como el **redoblante**.</li>
-                <li><strong>🟡 Sonidos Agudos:</strong> Son ligeros y rítmicos, como el **hi-hat**.</li>
-            </ul>
-        </section>
-
-        <!-- 🥁 SECCIÓN 2: División de la batería -->
-        <section class="section">
-            <h2>🥁 ¿Cómo se divide la batería?</h2>
-            <p>La batería no es un solo instrumento, sino un conjunto de varios instrumentos organizados en **dos grupos principales**:</p>
-            <ul>
-                <li><strong>🛢️ Tambores:</strong> Son los cuerpos de percusión y generan el ritmo principal. Incluyen:
-                    <ul>
-                        <li>Bombo</li>
-                        <li>Redoblante</li>
-                        <li>Toms (de diferentes tamaños)</li>
-                    </ul>
-                </li>
-                <li><strong>🥇 Platillos:</strong> Aportan brillo y textura al ritmo. Incluyen:
-                    <ul>
-                        <li>Hi-hat</li>
-                        <li>Crash</li>
-                        <li>Ride</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <!-- 🔑 SECCIÓN 3: Los 3 elementos esenciales -->
-        <section class="section">
-            <h2>🔑 Los 3 Elementos Esenciales</h2>
-            <p>Para empezar a tocar la batería, **no es necesario usar todo el set**. Podemos reducir la batería a **tres elementos esenciales**:</p>
-            <ul>
-                <li><strong>🥁 Bombo:</strong> Es el corazón del ritmo, da la base y profundidad.</li>
-                <li><strong>🥁 Redoblante:</strong> Marca el ritmo y acentos clave.</li>
-                <li><strong>🥁 Hi-hat:</strong> Mantiene el tiempo y da groove.</li>
-            </ul>
-            <p>Muchos ritmos populares de **rock, pop, funk y reggae** se basan en estos tres elementos.</p>
-        </section>
-
-        <!-- 🎨 SECCIÓN 4: Más tambores y platillos -->
-        <section class="section">
-            <h2>🛠️ ¿Por qué hay más tambores y platillos?</h2>
-            <p>Aunque se puede tocar con solo tres elementos, los bateristas agregan más tambores y platillos para ampliar sus opciones sonoras:</p>
-            <ul>
-                <li><strong>🔹 Más toms:</strong> Permiten hacer **rellenos (fills) más variados**.</li>
-                <li><strong>🔹 Crash:</strong> Se usa para **acentuar momentos importantes** en una canción.</li>
-                <li><strong>🔹 Ride:</strong> Ayuda a **mantener ritmos más definidos**.</li>
-                <li><strong>🔹 China y Splash:</strong> Agregan **sonidos experimentales y agresivos**.</li>
-            </ul>
-            <p>Podemos pensar en la batería como una paleta de colores: **Bombo, Redoblante y Hi-hat** son los colores primarios, 
-               mientras que los demás elementos nos permiten agregar más matices y expresión.</p>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© 2025 Musicala. Todos los derechos reservados.</p>
-    </footer>
-
+  </noscript>
 </body>
 </html>
