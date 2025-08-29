@@ -1,75 +1,269 @@
-/* 🎨 Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-    font-size: 18px; /* Texto más grande */
-    line-height: 1.8;
+/* =========================================================
+   styles.css — Musicala · "Cómo Pensar la Batería"
+   Estilo limpio, accesible y responsivo
+   ========================================================= */
+
+/* ---------- Variables de tema ---------- */
+:root{
+  --bg:#f9fafb;
+  --card:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --brand:#0a7cff;
+  --brand-dark:#0657bd;
+  --accent:#ffd166;         /* para resaltar teclas/etiquetas */
+  --border:#e5e7eb;
+  --radius:16px;
+  --shadow:0 10px 28px rgba(0,0,0,.08);
 }
 
-/* 📌 Logo centrado */
-.logo-container {
-    text-align: center;
-    margin: 20px 0;
+/* ---------- Base / resets suaves ---------- */
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--text);
+  font-size:18px;
+  line-height:1.75;
+
+  /* Fondo con textura (archivo local textura.jpg) + velo blanco */
+  background:
+    linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.88)),
+    url("textura.jpg");
+  background-size:auto, 800px 800px;
+  background-repeat:no-repeat, repeat;
+  background-attachment:scroll, fixed;
+  background-color:var(--bg);
+}
+img{ max-width:100%; height:auto; display:block; }
+a{ color:var(--brand); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+::selection{ background:rgba(10,124,255,.15); }
+
+/* ---------- Logo ---------- */
+.logo-container{ text-align:center; padding:16px 0; }
+.logo{
+  max-width:150px;
+  border-radius:12px;
+  box-shadow:0 6px 14px rgba(0,0,0,.08);
 }
 
-.logo {
-    max-width: 150px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+/* ---------- Encabezado ---------- */
+.site-header h1{
+  margin:0;
+  text-align:center;
+  padding:18px 14px;
+  color:#fff;
+  font-size:32px;
+  background:linear-gradient(135deg, var(--brand), var(--brand-dark));
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
 
-/* 📦 Contenedor principal */
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Imagen hero (encabezado) */
+.hero{
+  width:100%;
+  max-height:360px;          /* controla tamaño */
+  object-fit:cover;          /* recorte elegante */
+  object-position:center;
+  border-radius:20px;
+  margin:14px auto 0;
+  box-shadow:var(--shadow);
+}
+/* Si prefieres ver la imagen completa:
+.hero{ max-height:360px; object-fit:contain; background:#fff; } */
+
+/* ---------- Contenedor principal ---------- */
+.container{
+  max-width:980px;
+  margin:28px auto;
+  padding:0 16px;
 }
 
-/* 🥁 Secciones */
-.section {
-    margin-bottom: 40px;
-    padding: 25px;
-    border-left: 6px solid #007BFF;
-    background: #f4f4f4;
-    border-radius: 5px;
+/* ---------- Secciones ---------- */
+.section{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:22px;
+  margin:22px 0;
+}
+.section h2{
+  margin:0 0 10px 0;
+  color:var(--brand-dark);
+  font-size:24px;
+}
+.muted{ color:var(--muted); }
+
+/* Imágenes de apoyo (mapa, tarjetas) */
+.figure{
+  max-width:900px;
+  margin:10px auto 2px;
+  border-radius:14px;
+  box-shadow:0 8px 22px rgba(0,0,0,.06);
 }
 
-/* 🔠 Títulos mejorados */
-h1 {
-    text-align: center;
-    background: #007BFF;
-    color: white;
-    padding: 20px;
-    margin: 0;
-    font-size: 32px;
+/* ---------- Leyenda para la imagen de sonidos ---------- */
+.legend-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:10px;
+  font-size:15px;
+  color:var(--muted);
+}
+.legend-3 .tag{
+  display:flex; align-items:center; gap:8px;
+  background:#f8fafc; border:1px solid var(--border);
+  border-radius:12px; padding:8px 10px;
+}
+.dot{ width:12px; height:12px; border-radius:50%; }
+.dot.low{ background:#1d4ed8; }   /* azul grave */
+.dot.mid{ background:#f59e0b; }   /* naranja medio */
+.dot.high{ background:#eab308; }  /* amarillo agudo */
+
+/* ---------- Tarjetas de los 3 esenciales ---------- */
+.essentials{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(220px,1fr));
+  gap:16px;
+  margin-top:14px;
+}
+.card-lite{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:14px;
+  box-shadow:0 8px 18px rgba(0,0,0,.05);
+}
+.card-lite h3{
+  margin:10px 0 6px; font-size:18px; color:var(--brand-dark);
+}
+.card-lite .mini{
+  color:var(--muted); font-size:14px; margin:0 0 8px;
+}
+.card-lite img{
+  width:56px; height:56px; object-fit:contain;
+}
+.badge{
+  display:inline-block; font-size:12px; padding:2px 8px;
+  background:#eef2ff; color:#1e40af; border-radius:999px;
+  border:1px solid #c7d2fe;
+  margin:6px 0 8px;
+}
+.how{ font-size:15px; margin:0; color:#374151; }
+.example{ margin:8px 0 0; font-size:14px; color:#6b7280; }
+
+/* ---------- Bloques de ejemplo/ejercicio ---------- */
+.note{
+  background:#f9fafb; border:1px dashed #cbd5e1;
+  padding:12px; border-radius:12px; font-size:15px; color:#374151;
 }
 
-h2 {
-    color: #0056b3;
-    font-size: 24px;
-    margin-bottom: 15px;
+/* ---------- Laboratorio de sonidos ---------- */
+.lab .controls{
+  display:flex;
+  gap:16px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin:6px 0 18px;
+}
+.control{ font-size:15px; color:var(--text); }
+.control.checkbox{ display:flex; align-items:center; gap:8px; }
+
+/* Slider (input range) estilizado */
+input[type="range"]{
+  -webkit-appearance:none; appearance:none;
+  width:220px; height:6px; border-radius:999px;
+  background:#e5e7eb; outline:none;
+}
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance:none; appearance:none;
+  width:18px; height:18px; border-radius:50%;
+  background:var(--brand); border:2px solid #fff;
+  box-shadow:0 2px 6px rgba(0,0,0,.2);
+  cursor:pointer;
+}
+input[type="range"]::-moz-range-thumb{
+  width:18px; height:18px; border:none; border-radius:50%;
+  background:var(--brand); cursor:pointer;
 }
 
-/* 📱 Diseño responsive */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 20px;
-    }
-    body {
-        font-size: 16px;
-    }
-    h1 {
-        font-size: 28px;
-    }
-    h2 {
-        font-size: 22px;
-    }
+/* Grid de pads */
+.drum-grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(160px,1fr));
+  gap:16px;
+}
+.pad{
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  background:#f3f4f6;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:16px 14px;
+  font-size:18px;
+  cursor:pointer;
+  transition:transform .06s ease, box-shadow .2s ease, background .2s ease;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+.pad:hover{ background:#eef0f3; }
+.pad:focus-visible{ outline:3px solid var(--brand); outline-offset:2px; }
+.pad:active, .pad.is-playing{
+  transform:translateY(2px) scale(.99);
+  background:#e9ecf0;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+.pad-icon{ width:28px; height:28px; object-fit:contain; }
+
+/* Etiqueta de tecla (A/S/D) */
+.key{
+  display:inline-block;
+  margin-left:6px;
+  font-size:13px;
+  background:var(--accent);
+  color:#111;
+  padding:2px 6px;
+  border-radius:8px;
+}
+/* Apariencia general para <kbd> en textos */
+kbd{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,"Liberation Mono",monospace;
+  font-size:.9em;
+  background:#111;
+  color:#fff;
+  padding:.15em .45em;
+  border-radius:6px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer{
+  text-align:center;
+  padding:24px 16px 60px;
+  color:var(--muted);
+}
+
+/* ---------- Accesibilidad ---------- */
+.sr-only{
+  position:absolute !important;
+  width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+/* ---------- Motion-safe ---------- */
+@media (prefers-reduced-motion: reduce){
+  *{ transition:none !important; animation:none !important; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px){
+  .container{ padding:0 14px; }
+}
+@media (max-width: 768px){
+  body{ font-size:16px; }
+  .site-header h1{ font-size:28px; }
+  .section h2{ font-size:22px; }
+  .drum-grid{ grid-template-columns:1fr; }
+  .legend-3{ grid-template-columns:1fr; }
+  .essentials{ grid-template-columns:1fr; }
 }
